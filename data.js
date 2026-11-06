@@ -1,4 +1,11 @@
 export const categories = ["All Products", "Food Grade", "Cosmetic Grade", "Bundles", "Foodservice / B2B", "Gourmet Infusions", "Sustainable Living", "Limited Edition", "Travel & Wellness"];
+export const currencies = {
+  USD: { symbol: 'US$', rate: 1, label: 'USD — US dollar' },
+  NZD: { symbol: 'NZ$', rate: 1.63, label: 'NZD — New Zealand dollar' },
+  HUF: { symbol: 'Ft', rate: 365, label: 'HUF — Hungarian forint' }
+};
+// Static demo display rates only, centralised for replacement with a verified exchange-rate service.
+export const convertPrice = (usd, currency) => Math.round(usd * currencies[currency].rate * (currency === 'HUF' ? 1 : 100)) / (currency === 'HUF' ? 1 : 100);
 
 // Product names, formats, prices and descriptions are based only on the public Wix catalogue.
 export const products = [
@@ -23,5 +30,10 @@ export const products = [
   { id: "radiance-elixir", badge: "Clean Beauty", name: "Radiance Elixir Face & Body", size: "100 ml", price: 32, category: "Cosmetic Grade", icon: "◉" },
   { id: "extra-virgin-500", badge: "Best Seller", name: "Culinary Gold Extra Virgin", size: "500 ml", price: 42, category: "Food Grade", icon: "◈", description: "100% pure Colombian cold-pressed avocado oil from Antioquia. Features a high smoke point of 260°C (500°F) and nutrient-rich oleic acid. Certified MPI compliant." }
 ];
+
+const wixImages = [
+'8728e3_94f4c3156b84405497c26da59800371b~mv2.jpg','8728e3_1b974f41b8d641e28e93463c4f50712c~mv2.jpg','8728e3_f5f983db1db34eb1b33bd057b44a2908~mv2.jpg','8728e3_c91e7931c43a4a7eba3ded1f97cede44~mv2.jpg','8728e3_c2f490b4c20549898e3fe142187dfefe~mv2.jpg','8728e3_b9752058c95b43a6bfebf1d27f6aa322~mv2.jpg','8728e3_d65d458a097e4e0080028c12f1fc25e9~mv2.jpg','8728e3_993e4a417000416f814bf093d872c565~mv2.jpg','8728e3_5a64648f283e45d8b521c116dd7e8d27~mv2.jpg','8728e3_b726d235603e4649b6be3a389572406e~mv2.jpg','8728e3_60866df9d7e14066a3a73bb56a6d1d1e~mv2.jpg','8728e3_eceadc276a6b4be0959e559041441a81~mv2.jpg','8728e3_a4d0cc3c638d4b7fa20fee48567479c0~mv2.jpg','8728e3_21d2315838c640bd80c376487dc379c9~mv2.jpg','8728e3_3fcffd99add6453ca809b384fbab54ef~mv2.jpg','8728e3_67abfceb59f1446ca17aa06ad041f61b~mv2.jpg','8728e3_7e9fe4e47a50423a8496d565642cc98c~mv2.jpg','8728e3_9e454324d77445e188eaa2ac1c64ed25~mv2.jpg','8728e3_5612d6d176b64c318c8fcfab40669a39~mv2.jpg','8728e3_cc0773c3b4d64afda87a8ba6d94371d5~mv2.jpg'
+];
+products.forEach((product, index) => { product.image = `https://static.wixstatic.com/media/${wixImages[index]}/v1/fill/w_900,h_900,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/${wixImages[index]}`; });
 
 export const getProduct = (id) => products.find((product) => product.id === id);

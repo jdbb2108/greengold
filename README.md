@@ -20,6 +20,13 @@ The app is dependency-free. Open `index.html` in a modern browser or serve the f
 - Keyboard-accessible controls, semantic landmarks, visible focus states, a skip link and basic SEO metadata.
 - Node tests that protect catalogue data integrity.
 
+## Iteration notes
+
+- The full public catalogue is now associated with the product photographs exposed by Wix's image CDN. They remain remotely served from their original public location and use responsive Wix transformation URLs; no photographs have been substituted or assigned to the wrong product.
+- USD, NZD and HUF are display currencies stored in `localStorage`. The exchange factors live in `data.js` and are intentionally static demo values, not financial quotes or an effective payment currency.
+- Search, category filtering, sorting, cart edits/removal, a product-image zoom, supplementary routes (`FAQ`, `Contact`, `Shipping & returns`, `Terms`, `Privacy`) and a transparency-led chatbot are implemented.
+- The original Wix content reviewed includes strategy and market-assessment material that should not be presented as verified operational evidence or consumer research. The storefront keeps those claims bounded rather than promoting them as facts.
+
 ## Production requirements (not implemented)
 
 Before accepting real orders, a production build needs:
