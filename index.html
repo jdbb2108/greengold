@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Green Gold demo store: Colombian cold-pressed avocado oil. Demo checkout only; no real payments are collected." />
+  <meta name="theme-color" content="#173d2b" />
+  <title>Green Gold — Colombian avocado oil</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="notice">DEMO STORE — No real payments are collected or processed.</div>
+  <header class="header"><a class="brand" href="#/">GREEN <em>GOLD</em></a><nav aria-label="Main navigation"><a href="#/">Home</a><a href="#/shop">Shop</a><a href="#/b2b">B2B</a><a href="#/about">Our market today</a></nav><button class="cart-trigger" aria-label="Open shopping cart">Bag <span id="cartCount">0</span></button></header>
+  <main id="main" tabindex="-1"></main>
+  <footer class="footer"><section><a class="brand" href="#/">GREEN <em>GOLD</em></a><p>Colombian avocado oil, thoughtfully presented.</p><small>Prototype based on public Green Gold content. Verify all operational information before launch.</small></section><section><h2>Explore</h2><a href="#/shop">Shop</a><a href="#/b2b">Foodservice / B2B</a><a href="#/about">Our market today</a></section><section><h2>Support</h2><a href="#/help">FAQs</a><a href="#/checkout">Checkout demo</a><a href="#/legal">Terms & policies</a></section><section><h2>Ready for launch?</h2><p>Connect a real payment provider, fulfillment rules and customer support before accepting orders.</p></section><div class="copyright">© 2026 Green Gold Colombia. All Rights Reserved. · <a href="#/legal">T&C · Disclaimer · Refund policies · Habeas Data</a></div></footer>
+  <aside class="cart-drawer" aria-label="Shopping cart" aria-hidden="true"><div class="drawer-head"><h2>Your bag</h2><button class="icon-button close-cart" aria-label="Close cart">×</button></div><div id="cartItems"></div><div class="cart-foot"><div class="total"><span>Subtotal</span><strong id="cartTotal">COP 0</strong></div><p class="muted">Taxes and shipping are not calculated in this demo.</p><a class="button primary checkout-link" href="#/checkout">Continue to checkout</a></div></aside><div class="backdrop"></div>
+  <button class="chat-toggle" aria-expanded="false" aria-controls="chatPanel">Need help? <span>✦</span></button><section id="chatPanel" class="chat-panel" aria-label="Green Gold assistant" hidden><div class="chat-head"><div><strong>Green Gold assistant</strong><small>Demo FAQ assistant</small></div><button class="icon-button close-chat" aria-label="Close assistant">×</button></div><div id="chatMessages" class="chat-messages" aria-live="polite"></div><div class="quick-questions"><button>What makes it cold-pressed?</button><button>What is the smoke point?</button><button>Do you offer B2B formats?</button><button>Is checkout real?</button></div><form id="chatForm"><label class="sr-only" for="chatInput">Ask a question</label><input id="chatInput" placeholder="Ask about products or the demo…" autocomplete="off" /><button class="icon-button" aria-label="Send message">↑</button></form></section>
+  <template id="productCard"><article class="product-card"><a class="product-link"><div class="product-visual"><span class="product-icon"></span></div><p class="eyebrow product-badge"></p><h3 class="product-name"></h3><p class="product-size"></p><strong class="product-price"></strong></a><button class="add-button">Add to bag</button></article></template>
+  <script type="module" src="app.js"></script>
+</body></html>
